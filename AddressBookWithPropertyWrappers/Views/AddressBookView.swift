@@ -11,8 +11,7 @@ struct AddressBookView: View {
     // TODO: STATEOBJECT - Add property wrapper to viewModel so that it observes changes
     private var viewModel = AddressBookViewModel()
     
-    // TODO: STATE - Add property wrapper to displayFavoriteCount property so it can be reassigned
-    private var displayFavoriteCount = true
+    @State private var displayFavoriteCount = true
     
     var body: some View {
         VStack {
@@ -29,7 +28,8 @@ struct AddressBookView: View {
                     Spacer()
                 }
             }
-            // TODO: STATE - Add toggle for displayFavoriteCount
+            Toggle("Display number of favorites", isOn: $displayFavoriteCount)
+                .padding()
         }
         .background(Color(red: 254/255, green: 240/255, blue: 229/255).ignoresSafeArea())
     }
