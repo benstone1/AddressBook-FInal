@@ -19,7 +19,8 @@ struct AddressBookView: View {
                 .font(.title)
                 .padding()                               
             Spacer()
-            ContactsView() //TODO: ENVIRONMENTOBJECT - Pass the viewModel to the ContactsView
+            ContactsView()
+                .environmentObject(viewModel)
             Spacer()
             if displayFavoriteCount {
                 HStack {

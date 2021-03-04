@@ -21,8 +21,4 @@ class AddressBookViewModel: ObservableObject {
     func contact(atIndex index: Int) -> Contact {
         addressBook.contact(atIndex: index)
     }
-        
-    func contactIsFavorite(atIndex index: Int) -> Bool {
-        addressBook.contactIsFavorite(atIndex: index)
-    }
 }
